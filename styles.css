@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+.main {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: #ffffff3e 1.5px solid;
+  padding: 5px 30px;
+}
+.nav img {
+  width: 10%;
+}
+.nav .right-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+}
+.nav button {
+  background-color: #5a5a5a84;
+  backdrop-filter: blur(25px);
+  width: 75px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+}
+.nav button i {
+  color: #ff8000;
+  font-size: 19px;
+}
+.cont {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+}
+.left {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+.top-vid {
+  width: 80%;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  background-color: #363636a2;
+  backdrop-filter: blur(20px);
+  height: 50%;
+}
+.top-vid video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.bottomvid {
+  width: 80%;
+  height: 50%;
+  backdrop-filter: blur(20px);
+  background-color: #363636a2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.bottomvid video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.user1,
+.User2 {
+  position: absolute;
+  z-index: 22;
+  bottom: 1%;
+  right: 1%;
+  border-radius: 8px;
+  color: #ff8000;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000000;
+  padding: 5px 20px;
+}
+.right {
+  width: 45%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 50px;
+  background-color: #383838;
+}
+.topchat {
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
+}
+.topchat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bottomchat {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.bottomchat button {
+  width: 75px;
+  background-color: #737373;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 50px;
+  backdrop-filter: blur(20px);
+}
+.bottomchat input {
+  width: 620px;
+  background-color: #737373;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  padding: 15px 30px;
+  backdrop-filter: blur(20px);
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: #fff;
+}
+.bottomchat i {
+  font-size: 1.43rem;
+  position: absolute;
+  color: #ff8000;
+  right: 6.5%;
+}
+button,
+i {
+  cursor: pointer;
+}
+.closemobile {
+  display: none;
+}
+@media (max-width: 425px) {
+  body {
+    overflow: hidden;
+  }
+  .main {
+    overflow: hidden;
+  }
+  .cont {
+    flex-direction: column;
+    gap: 25px;
+    overflow: hidden;
+    align-items: center;
+  }
+  .closemobile {
+    display: block;
+    position: absolute;
+    bottom: 7.5%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 888;
+  }
+  .closemobile button:last-child {
+    margin-right: 40px;
+  }
+  .closemobile button {
+    padding: 10px 40px;
+    background-color: #737373a4;
+    backdrop-filter: blur(20px);
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+  }
+  .right {
+    display: none;
+  }
+  .left {
+    width: 100vw;
+    padding: 0;
+    height: 75vh;
+    padding: 10px 20px;
+  }
+  .left .top-vid {
+    width: 100%;
+
+    height: 100%;
+  }
+  .bottomvid {
+    width: 100%;
+    height: 100%;
+  }
+  .nav {
+    overflow: hidden;
+  }
+  .nav img {
+    width: 60%;
+  }
+}
