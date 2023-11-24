@@ -41,12 +41,9 @@
             <div class="User2">Username</div>
           </div>
           <div class="bottomvid">
-            <video
-              loop
-              autoplay
-              muted
-              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-            ></video>
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="canvas" class="d-none"></canvas>
+            <audio id="snapSound" src="audio/snap.wav" preload="auto"></audio>
             <div class="user1">You</div>
           </div>
         </div>
@@ -74,5 +71,10 @@
         <button>Report</button>
       </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
